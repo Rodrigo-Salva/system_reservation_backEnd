@@ -288,7 +288,7 @@ Este proyecto está bajo la licencia MIT. Ver [LICENSE](LICENSE) para más detal
 
 ## 👥 Contribuidores
 
-- **Tu Nombre** - *Desarrollo inicial* - [@tu-usuario](https://github.com/Rodrigo-Salva)
+- **Tu Nombre** - *Desarrollo inicial* - [@tu-usuari0](https://github.com/Rodrigo-Salva)
 
 ---
 
