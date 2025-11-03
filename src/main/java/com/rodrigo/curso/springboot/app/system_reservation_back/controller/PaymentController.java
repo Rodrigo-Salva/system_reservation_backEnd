@@ -1,4 +1,4 @@
 package com.rodrigo.curso.springboot.app.system_reservation_back.controller;
 
-public class ReservationController {
+public class PaymentController {
 }

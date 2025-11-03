@@ -1,0 +1,60 @@
+# CONFIGURACIÓN GENERAL
+spring:
+  application:
+    name: system-reservation-api
+
+  # CONFIGURACIÓN DE BASE DE DATOS
+  datasource:
+    url: jdbc:postgresql://localhost:5432/reservation_db
+    username: postgres
+    password: 28demarzo
+    driver-class-name: org.postgresql.Driver
+
+  # CONFIGURACIÓN DE JPA (Hibernate)
+  jpa:
+    hibernate:
+      ddl-auto: create-drop    # En desarrollo: recrea las tablas
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        show_sql: false
+        use_sql_comments: true
+    open-in-view: false
+
+  # CONFIGURACIÓN DE JSON
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+# CONFIGURACIÓN DEL SERVIDOR
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# CONFIGURACIÓN DE LOGGING
+logging:
+  level:
+    com.reservation: DEBUG
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+    org.hibernate: WARN
+    org.springframework.boot.autoconfigure: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# CONFIGURACIÓN JWT (crearemos esto después)
+jwt:
+  secret: your-super-secret-key-change-in-production-at-least-256-bits-long
+  expiration: 86400000
+
+# CONFIGURACIÓN SWAGGER/OPENAPI
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    operations-sorter: method
+  api-docs:
+    path: /v3/api-docs
